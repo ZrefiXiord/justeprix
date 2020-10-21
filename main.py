@@ -35,6 +35,10 @@ def reset():
 def svg():
     global joueur, nombre, t0
     joueur = value_edit.get()
+    if joueur.isdigit():
+        pass
+    else:
+        messagebox.showerror('Erreur', 'Veuillez saisir un nombre et non des lettres')
     if int(joueur)<1 or int(joueur)>1000:
         messagebox.showerror('Erreur', 'Veuillez saisir un nombre en 1 et 1000')
     if int(joueur) > nombre:
